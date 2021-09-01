@@ -1,11 +1,20 @@
 const searchBook = () => {
     const searchField = document.getElementById('search-field');
+    const errorHandling = document.getElementById('errors');
     const searchText = searchField.value;
     searchField.value = '';
     const url = `http://openlibrary.org/search.json?q=${searchText}`;
     fetch(url)
     .then(res => res.json())
-    .then(data => displaySearchResult(data.docs))
+    .then(data => 
+        {
+            if (data.numFound === 0) {
+                errorHandling.textContent = 'No result found';
+            } else {
+                errorHandling.textContent = '';
+            }
+        displaySearchResult(data.docs);
+} )
 }
 const displaySearchResult = docs => {
     // console.log(docs[0]);
