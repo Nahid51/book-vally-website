@@ -17,11 +17,14 @@ const searchBook = () => {
 } )
 }
 const displaySearchResult = docs => {
-    // console.log(docs[0]);
+    // console.log('Number of books',docs.length);
     const searchResult = document.getElementById('search-result');
+    const getBookText = document.getElementById('get-book');
+    const getBook = getBookText.innerText = docs.length;
     searchResult.textContent = '';
     docs.forEach(doc => {
-        console.log(doc);
+        // console.log(doc);
+        
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="col">
@@ -41,7 +44,7 @@ const displaySearchResult = docs => {
     });
 }
 const loadBookDetail = bookId => {
-    console.log(bookId);
+    // console.log(bookId);
 }
 
 
