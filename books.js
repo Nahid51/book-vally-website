@@ -10,11 +10,11 @@ const searchBook = () => {
     .then(data => 
       // error handling
         {
-            if (data.numFound === 0) {
-                errorHandling.textContent = 'No results were found try another search';
-            } else {
-                errorHandling.textContent = '';
-            }
+          if (data.numFound === 0) {
+              errorHandling.textContent = 'No results were found try another search';
+          } else {
+              errorHandling.textContent = '';
+          }
         displaySearchResult(data.docs);
 } )
 }
@@ -27,7 +27,6 @@ const displaySearchResult = docs => {
 
     searchResult.textContent = ''; // for empty display book section
     docs.forEach(doc => {
-      console.log(doc);
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="col mt-3">
