@@ -11,7 +11,7 @@ const searchBook = () => {
       // error handling
         {
             if (data.numFound === 0) {
-                errorHandling.textContent = 'No result found';
+                errorHandling.textContent = 'No results were found try another search';
             } else {
                 errorHandling.textContent = '';
             }
@@ -34,7 +34,7 @@ const displaySearchResult = docs => {
           <div class="card h-100">
             <img src="https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg" style="height: 500px;" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-title">Book name: ${doc.text[1]}</p>
+              <p class="card-title fw-bold">Title: ${doc.text[1]}</p>
               <p class="card-text">Author name: ${doc.author_name}</p>
               <p class="card-text">Publisher: ${doc.publisher}</p>
             </div>
@@ -47,5 +47,3 @@ const displaySearchResult = docs => {
         searchResult.appendChild(div); // push(append) a div into searchResult
     });
 }
-
-
