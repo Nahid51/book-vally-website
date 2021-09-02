@@ -20,14 +20,14 @@ const displaySearchResult = docs => {
     // console.log('Number of books',docs.length);
     const searchResult = document.getElementById('search-result');
     const getBookText = document.getElementById('get-book');
-    const getBook = getBookText.innerText = docs.length;
+    getBookText.innerText = `Total books found: ${docs.length}`;
     searchResult.textContent = '';
     docs.forEach(doc => {
         // console.log(doc);
         
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="col">
+        <div class="col mt-3">
           <div onclick="loadBookDetail('${doc.id_goodreads}')" class="card h-100">
             <img src="https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg" style="height: 500px;" class="card-img-top" alt="...">
             <div class="card-body">
