@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Archive</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Archive</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
 <body>
-    <!-- books search section -->
-    <nav class="container navbar navbar-light bg-dark rounded w-50 my-3">
-        <div class="container-fluid">
-          <a class="navbar-brand text-light fw-bolder">Welcome to <span class="text-info">Book Vally</span></a>
-          <form class="d-flex">
-            <input id="search-field" class="form-control me-2" type="search" placeholder="Search Book" aria-label="Search">
-            <button onclick="searchBook()" id="button-search" class="btn btn-outline-light" type="button">Search</button>
-          </form>
-        </div>
-      </nav>
+  <!-- books search section -->
+  <nav class="container navbar navbar-light bg-dark rounded w-50 my-3">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light fw-bolder">Welcome to <span class="text-info">Book Vally</span></a>
+      <form class="d-flex">
+        <input id="search-field" class="form-control me-2" type="search" placeholder="Search Book" aria-label="Search">
+        <button onclick="searchBook()" id="button-search" class="btn btn-outline-light" type="button">Search</button>
+      </form>
+    </div>
+  </nav>
 
-    <!-- errors handling -->
-    <div id="errors" class="text-center"></div>
+  <!-- errors handling -->
+  <div id="errors" class="text-center"></div>
 
-    <!-- numbers of books -->
-    <div id="get-book" class="text-center"></div>
+  <!-- numbers of books -->
+  <div id="get-book" class="text-center"></div>
 
-    <!-- book search result -->
-    <div id="search-result" class="container mx-auto row row-cols-1 row-cols-md-3 g-4 mb-5"></div>
+  <!-- book search result -->
+  <div id="search-result" class="container mx-auto row row-cols-1 row-cols-md-3 g-4 mb-5"></div>
 
-    <script src="books.js"></script>
+  <script src="books.js"></script>
 </body>
+
 </html>
